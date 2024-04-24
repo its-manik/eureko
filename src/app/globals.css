@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+/* CSS */
+.custom-bg-transition-main-page {
+  background: linear-gradient(to right, #141414 50%, rgba(255, 255, 255, 0.05) 50%);
+  /* background: linear-gradient(to right, #3D59AB 50%, #fff 50%); */
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s ease-in-out;
+}
+.custom-bg-transition-main-page:hover {
+  background-position: left;
+}
+.custom-bg-transition {
+  background: linear-gradient(to right, #4682b4 50%, #fff 50%);
+  /* background: linear-gradient(to right, #3D59AB 50%, #fff 50%); */
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s ease-in-out;
+}
+.custom-bg-transition:hover {
+  background-position: left;
+}
+
+.image-container {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  height: 400px; /* Default height */
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/images/testimonial/orangebg.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.second-image {
+  position: absolute;
+  top: 0;
+  left: 30%; /* Adjusted position for the second image */
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.bg-text-orange::after {
+  position: absolute;
+  content: "”";
+  top: 0;
+  left: -30px; /* Adjusted position for the pseudo-element */
+  font-size: 70px;
+  height: 20px;
+  width: 20px;
+}
+
+.bg-text-orange::before {
+  position: absolute;
+  content: "“";
+  bottom: -20px; /* Adjusted position for the pseudo-element */
+  right: 62%; /* Adjusted position for the pseudo-element */
+  font-size: 70px;
+  height: 20px;
+  width: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    height: 300px; /* Adjusted height for smaller screens */
+  }
+
+  .second-image {
+    left: 0; /* Reset position for smaller screens */
+  }
+
+  .bg-text-orange::before,
+  .bg-text-orange::after {
+    display: none; /* Hide pseudo-elements on smaller screens */
+  }
+}
+
+.newsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #306059;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #418279;
+}
+
+.pagination .currentPage {
+  margin: 0 10px;
+}
+
+/* Assuming the file is styles.css or similar */
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-gradient {
+  background: linear-gradient(to right, #306059, #1f3e39);
+}
+
+.email-input:focus {
+  --tw-ring-color: #418279;
+}
+
+.join-waitlist-btn {
+  background-color: #418279;
+}
+
+.join-waitlist-btn:hover {
+  background-color: #306059;
+}
+
+.more-details-btn {
+  background-color: #dafe71;
+}
+
+.more-details-btn:hover {
+  background-color: #e7fea4;
+}
+
+/* BG--Gradiyant--Pages */
+.Home_Page {
+  background: linear-gradient(to bottom, #1a1a1a, #141414) !important;
+}
+.Icon_BG_G {
+  background: radial-gradient(circle, #418279, #1f3e39) !important;
+}
+.Research_page {
+  background: linear-gradient(to right, #063d66, #032036) !important;
+}
+.Product_page {
+  background: linear-gradient(to right, #686c7e, #3e404b) !important;
+}
+.Our_Pricing_paln {
+  background: linear-gradient(to right, #30615a, #0d1b19) !important;
+}
+.Footer {
+  background: linear-gradient(to top, #1a1a1a, #141414) !important;
+}
+.Company_page {
+  background: linear-gradient(to right, #003e5e, #012f46) !important;
+}
